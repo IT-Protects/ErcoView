@@ -531,6 +531,10 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="..\secrets\sql.env">
+      <Link>secrets\sql.env</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="DataSets\dsErcoView.xsc">
       <DependentUpon>dsErcoView.xsd</DependentUpon>
     </None>

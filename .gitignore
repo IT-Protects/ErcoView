@@ -41,12 +41,14 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-## Local secrets (if added later)
+## Local secrets / git-crypt keys (never commit keys)
 *.local.config
 appsettings.*.local.json
 secrets.json
-.env
-.env.*
+# Note: tracked .env under secrets/ is git-crypt encrypted; local key files stay ignored:
+*-git-crypt.key
+git-crypt-key*
+*.git-crypt.key
 
 ## Test / coverage
 TestResults/

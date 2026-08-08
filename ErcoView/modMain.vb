@@ -201,15 +201,66 @@ Module modMain
             databaseName = "ErcoView_Training"
         End If
 
-        Dim connString As String = ""
-        If isLocalDatabase Then
-            'connString = String.Format("Data source={0};Initial Catalog={1};User ID=PortalUser;Password=!08Portal03!", My.Settings.localIP, databaseName)
-            connString = String.Format("Data source={0};Initial Catalog={1};User ID=ercoviewuser;Password=!ercoView1", My.Settings.localIP, databaseName)
-        Else
-            connString = String.Format("Data source={0};Initial Catalog={1};User ID=ercoviewuser;Password=!ercoView1", My.Settings.remoteIP, databaseName)
+        Dim sqlUser As String = ""
+        Dim sqlPassword As String = ""
+        If Not TryLoadSqlCredentials(sqlUser, sqlPassword) Then
+            MsgBox("SQL credentials not found. Unlock git-crypt and ensure secrets\sql.env exists. See docs\git-crypt.md.", MsgBoxStyle.Critical, "ErcoView")
+            Return ""
         End If
 
-        Return connString
+        Dim dataSource As String = If(isLocalDatabase, My.Settings.localIP, My.Settings.remoteIP)
+        Return String.Format("Data source={0};Initial Catalog={1};User ID={2};Password={3}", dataSource, databaseName, sqlUser, sqlPassword)
+    End Function
+
+    ''' <summary>
+    ''' Loads SQL_USER / SQL_PASSWORD from secrets\sql.env (git-crypt encrypted in the repo).
+    ''' </summary>
+    Private Function TryLoadSqlCredentials(ByRef sqlUser As String, ByRef sqlPassword As String) As Boolean
+        Try
+            Dim baseDir As String = AppDomain.CurrentDomain.BaseDirectory
+            Dim candidates As String() = {
+                Path.Combine(baseDir, "secrets", "sql.env"),
+                Path.Combine(baseDir, "..", "secrets", "sql.env"),
+                Path.Combine(baseDir, "..", "..", "secrets", "sql.env"),
+                Path.Combine(baseDir, "..", "..", "..", "secrets", "sql.env")
+            }
+
+            Dim envPath As String = Nothing
+            For Each candidate As String In candidates
+                Dim full As String = Path.GetFullPath(candidate)
+                If File.Exists(full) Then
+                    envPath = full
+                    Exit For
+                End If
+            Next
+
+            If envPath Is Nothing Then
+                Return False
+            End If
+
+            For Each rawLine As String In File.ReadAllLines(envPath)
+                Dim line As String = rawLine.Trim()
+                If line.Length = 0 OrElse line.StartsWith("#") Then
+                    Continue For
+                End If
+                Dim eq As Integer = line.IndexOf("="c)
+                If eq <= 0 Then
+                    Continue For
+                End If
+                Dim key As String = line.Substring(0, eq).Trim()
+                Dim value As String = line.Substring(eq + 1).Trim()
+                Select Case key.ToUpperInvariant()
+                    Case "SQL_USER"
+                        sqlUser = value
+                    Case "SQL_PASSWORD"
+                        sqlPassword = value
+                End Select
+            Next
+
+            Return Not String.IsNullOrEmpty(sqlUser) AndAlso Not String.IsNullOrEmpty(sqlPassword)
+        Catch
+            Return False
+        End Try
     End Function
 
 End Module

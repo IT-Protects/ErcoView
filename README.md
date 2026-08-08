@@ -30,7 +30,9 @@ ErcoView.sln
 
 ## Security note
 
-This codebase historically embedded SQL credentials and used plaintext application passwords. Treat the repository as **private**. Rotate any credentials that may have been committed, and prefer Windows Integrated Security or secrets outside source control.
+SQL credentials live in **git-crypt**–encrypted `secrets/sql.env` (not hardcoded in source). See [docs/git-crypt.md](docs/git-crypt.md) for unlock steps.
+
+Treat the repository as **private**. Old git history may still contain prior plaintext secrets — rotate credentials that were ever committed. Prefer Windows Integrated Security long term.
 
 See `EVALUATION-DEEP-DIVE.md` for a security plan, DB dependency map, bug notes, and modernization roadmap.
 

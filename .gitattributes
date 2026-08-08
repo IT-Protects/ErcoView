@@ -1,0 +1,13 @@
+# git-crypt: encrypt secrets at rest in the repository
+# Unlock docs (plaintext): docs/git-crypt.md
+
+# Credential / env material under secrets/
+secrets/*.env filter=git-crypt diff=git-crypt
+secrets/**/*.env filter=git-crypt diff=git-crypt
+secrets/**/*.secret filter=git-crypt diff=git-crypt
+**/*.secret filter=git-crypt diff=git-crypt
+**/.env filter=git-crypt diff=git-crypt
+**/.env.* filter=git-crypt diff=git-crypt
+
+# App config holds connection strings and remote SQL host defaults
+ErcoView/app.config filter=git-crypt diff=git-crypt

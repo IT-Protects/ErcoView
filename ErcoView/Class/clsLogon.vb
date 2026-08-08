@@ -10,12 +10,6 @@ Public Class clsLogon
     Public Sub OpenLogOnForm()
         Dim myUserName As String = My.Settings.logonName
 
-        'TEMP
-        'oFrmLogon.txtUserName.Text = "rbromm"
-        'oFrmLogon.txtPassword.Text = "eV1234"
-        'My.Settings.localIP = "ICES-CLD2\BETA_SQLProjects"
-        ''''
-
         If myUserName <> "" Then
             oFrmLogon.txtUserName.Text = myUserName
             oFrmLogon.txtPassword.Select()
