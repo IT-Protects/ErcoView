@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9CAC4EF8-F7FE-4EDE-8CB5-F7F82C728B94}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>ErcoView</RootNamespace>
+    <AssemblyName>ErcoView</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ErcoView.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ErcoView.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\Logo\EVIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>ErcoView.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>ErcoView.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.Data.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.Printing.v12.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.Utils.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.XtraBars.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.XtraEditors.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.XtraGrid.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v12.2, Version=12.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.XtraPrinting.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.2, Version=12.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.XtraReports.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.2, Version=12.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.XtraTreeList.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="WpfCtrlErcoView" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\clsBase.vb" />
+    <Compile Include="Class\clsFrmContact.vb" />
+    <Compile Include="Class\clsFrmCustomer.vb" />
+    <Compile Include="Class\clsFrmJobNumbers.vb" />
+    <Compile Include="Class\clsFrmList.vb" />
+    <Compile Include="Class\clsFrmMain.vb" />
+    <Compile Include="Class\clsFrmProposal.vb" />
+    <Compile Include="Class\clsFrmUsers.vb" />
+    <Compile Include="Class\clsFrmVendor.vb" />
+    <Compile Include="Class\clsKmlMaker.vb" />
+    <Compile Include="Class\clsLogon.vb" />
+    <Compile Include="Class\clsMapIt.vb" />
+    <Compile Include="Class\IErcoTableHandler.vb" />
+    <Compile Include="Class\TreeListOperationFindNodeByText.vb" />
+    <Compile Include="Class\Utils.vb" />
+    <Compile Include="DataSets\dsErcoView.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsErcoView.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsErcoView.vb">
+      <DependentUpon>dsErcoView.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBookingsSetup.Designer.vb">
+      <DependentUpon>frmBookingsSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBookingsSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBrowse.designer.vb">
+      <DependentUpon>frmBrowse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBrowse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCompletedProjectsSetup.Designer.vb">
+      <DependentUpon>frmCompletedProjectsSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCompletedProjectsSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmContact.Designer.vb">
+      <DependentUpon>frmContact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmContact.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCustomer.Designer.vb">
+      <DependentUpon>frmCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCustomerSelectForEdit.Designer.vb">
+      <DependentUpon>frmCustomerSelectForEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCustomerSelectForEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHotSeat.Designer.vb">
+      <DependentUpon>frmHotSeat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHotSeat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmJobNumbers.Designer.vb">
+      <DependentUpon>frmJobNumbers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmJobNumbers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLayoutSave.Designer.vb">
+      <DependentUpon>frmLayoutSave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLayoutSave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmList.Designer.vb">
+      <DependentUpon>frmList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogOn.Designer.vb">
+      <DependentUpon>frmLogOn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogOn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPassword.Designer.vb">
+      <DependentUpon>frmPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportViewer.Designer.vb">
+      <DependentUpon>frmReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProposal.Designer.vb">
+      <DependentUpon>frmProposal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProposal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReports.Designer.vb">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSettings.Designer.vb">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUser.Designer.vb">
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVendor.Designer.vb">
+      <DependentUpon>frmVendor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVendor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportSetup.Designer.vb">
+      <DependentUpon>frmReportSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWelcomeTraining.Designer.vb">
+      <DependentUpon>frmWelcomeTraining.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWelcomeTraining.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\rptBookings.Designer.vb">
+      <DependentUpon>rptBookings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\rptBookings.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\rptCompletedProjects.Designer.vb">
+      <DependentUpon>rptCompletedProjects.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\rptCompletedProjects.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\rptConstForcast.Designer.vb">
+      <DependentUpon>rptConstForcast.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\rptConstForcast.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\rptConstSch.Designer.vb">
+      <DependentUpon>rptConstSch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\rptConstSch.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\rptHotSeat.Designer.vb">
+      <DependentUpon>rptHotSeat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\rptHotSeat.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\rptNOR.Designer.vb">
+      <DependentUpon>rptNOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\rptNOR.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\rptOrderReceived.Designer.vb">
+      <DependentUpon>rptOrderReceived.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\rptOrderReceived.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\rptProposalByMonth.Designer.vb">
+      <DependentUpon>rptProposalByMonth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\rptProposalByMonth.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\rptRevenueReport.Designer.vb">
+      <DependentUpon>rptRevenueReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\rptRevenueReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\XtraReportBookings.Designer.vb">
+      <DependentUpon>XtraReportBookings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\XtraReportBookings.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\XtraReportProposal.Designer.vb">
+      <DependentUpon>XtraReportProposal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\XtraReportProposal.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraUserControl1.designer.vb">
+      <DependentUpon>XtraUserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraUserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="modMain.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resource.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="rptTest2.Designer.vb">
+      <DependentUpon>rptTest2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptTest2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frmBookingsSetup.resx">
+      <DependentUpon>frmBookingsSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBrowse.resx">
+      <DependentUpon>frmBrowse.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCompletedProjectsSetup.resx">
+      <DependentUpon>frmCompletedProjectsSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmContact.resx">
+      <DependentUpon>frmContact.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCustomer.resx">
+      <DependentUpon>frmCustomer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCustomerSelectForEdit.resx">
+      <DependentUpon>frmCustomerSelectForEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHotSeat.resx">
+      <DependentUpon>frmHotSeat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmJobNumbers.resx">
+      <DependentUpon>frmJobNumbers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLayoutSave.resx">
+      <DependentUpon>frmLayoutSave.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmList.resx">
+      <DependentUpon>frmList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogOn.resx">
+      <DependentUpon>frmLogOn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPassword.resx">
+      <DependentUpon>frmPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProposal.resx">
+      <DependentUpon>frmProposal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReports.resx">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSettings.resx">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUser.resx">
+      <DependentUpon>frmUser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVendor.resx">
+      <DependentUpon>frmVendor.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportSetup.resx">
+      <DependentUpon>frmReportSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWelcomeTraining.resx">
+      <DependentUpon>frmWelcomeTraining.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptBookings.resx">
+      <DependentUpon>rptBookings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptCompletedProjects.resx">
+      <DependentUpon>rptCompletedProjects.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptConstForcast.resx">
+      <DependentUpon>rptConstForcast.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptConstSch.resx">
+      <DependentUpon>rptConstSch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptHotSeat.resx">
+      <DependentUpon>rptHotSeat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptNOR.resx">
+      <DependentUpon>rptNOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptOrderReceived.resx">
+      <DependentUpon>rptOrderReceived.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptProposalByMonth.resx">
+      <DependentUpon>rptProposalByMonth.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\rptRevenueReport.resx">
+      <DependentUpon>rptRevenueReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\XtraReportBookings.resx">
+      <DependentUpon>XtraReportBookings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\XtraReportProposal.resx">
+      <DependentUpon>XtraReportProposal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraUserControl1.resx">
+      <DependentUpon>XtraUserControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="Resource.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTest2.resx">
+      <DependentUpon>rptTest2.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Logo\EVIcon.ico" />
+    <Content Include="Images\Logo\Icon.png" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\dsErcoView.xsc">
+      <DependentUpon>dsErcoView.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsErcoView.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsErcoView.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsErcoView.xss">
+      <DependentUpon>dsErcoView.xsd</DependentUpon>
+    </None>
+    <Content Include="ErcoViewTemplate.kml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\16\Add.png" />
+    <Content Include="Images\16\Copy.png" />
+    <Content Include="Images\16\Delete.png" />
+    <Content Include="Images\16\Settings.png" />
+    <Content Include="Images\16\Shield.png" />
+    <Content Include="Images\32\Add.png" />
+    <Content Include="Images\32\Close.png" />
+    <Content Include="Images\32\Copy.png" />
+    <Content Include="Images\32\Delete.png" />
+    <Content Include="Images\32\Document.png" />
+    <Content Include="Images\32\Flame.png" />
+    <Content Include="Images\32\Notepad.png" />
+    <None Include="Images\32\ge.png" />
+    <None Include="Images\32\image.png" />
+    <Content Include="Images\32\New.png" />
+    <Content Include="Images\32\Save 2.png" />
+    <Content Include="Images\32\Undo.png" />
+    <Content Include="Images\Blue.jpg" />
+    <Content Include="Images\Blue.png" />
+    <Content Include="Images\image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

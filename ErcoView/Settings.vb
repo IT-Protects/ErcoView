@@ -1,0 +1,24 @@
+﻿
+Namespace My
+    
+    'This class allows you to handle specific events on the settings class:
+    ' The SettingChanging event is raised before a setting's value is changed.
+    ' The PropertyChanged event is raised after a setting's value is changed.
+    ' The SettingsLoaded event is raised after the setting values are loaded.
+    ' The SettingsSaving event is raised before the setting values are saved.
+    Partial Friend NotInheritable Class MySettings
+        Private Sub MySettings_PropertyChanged(ByVal sender As Object, ByVal e As System.ComponentModel.PropertyChangedEventArgs) Handles Me.PropertyChanged
+            Select Case e.PropertyName
+                Case "UserConnString"
+                    Me("ErcoViewConnectionString") = My.Settings.remoteIP
+            End Select
+        End Sub
+
+
+        Private Sub MySettings_SettingsLoaded(ByVal sender As Object, ByVal e As System.Configuration.SettingsLoadedEventArgs) Handles Me.SettingsLoaded
+            If My.Settings.remoteIP.Trim.Length > 0 Then
+                Me("remoteIP") = My.Settings.remoteIP
+            End If
+        End Sub
+    End Class
+End Namespace

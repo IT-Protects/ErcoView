@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ErcoView", "ErcoView\ErcoView.vbproj", "{9CAC4EF8-F7FE-4EDE-8CB5-F7F82C728B94}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ErcoViewSetup", "ErcoViewSetup\ErcoViewSetup.vdproj", "{E1BD0064-0F6A-4DD8-99DF-8FEB03B249B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CAC4EF8-F7FE-4EDE-8CB5-F7F82C728B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CAC4EF8-F7FE-4EDE-8CB5-F7F82C728B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CAC4EF8-F7FE-4EDE-8CB5-F7F82C728B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CAC4EF8-F7FE-4EDE-8CB5-F7F82C728B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1BD0064-0F6A-4DD8-99DF-8FEB03B249B3}.Debug|Any CPU.ActiveCfg = Debug
+		{E1BD0064-0F6A-4DD8-99DF-8FEB03B249B3}.Release|Any CPU.ActiveCfg = Release
+		{E1BD0064-0F6A-4DD8-99DF-8FEB03B249B3}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://image-ces.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ErcoView\\ErcoView.vbproj
+		SccProjectName1 = ErcoView
+		SccLocalPath1 = ErcoView
+		SccProjectUniqueName2 = ErcoViewSetup\\ErcoViewSetup.vdproj
+		SccProjectName2 = ErcoViewSetup
+		SccLocalPath2 = ErcoViewSetup
+	EndGlobalSection
+EndGlobal

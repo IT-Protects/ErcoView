@@ -1,0 +1,54 @@
+## Build
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rtifacts/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.pdb
+*.cache
+*.log
+
+## Visual Studio
+.vs/
+*.rsuser
+*.vbproj.user
+*.csproj.user
+UpgradeLog*.xml
+_UpgradeReport_Files/
+Backup*/
+*.bak
+
+## NuGet / packages
+packages/
+*.nupkg
+project.lock.json
+
+## Publish / installer output
+**/Debug/
+**/Release/
+*.msi
+*.exe
+!ErcoViewTemplate.kml
+
+## OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+## Local secrets (if added later)
+*.local.config
+appsettings.*.local.json
+secrets.json
+.env
+.env.*
+
+## Test / coverage
+TestResults/
+*.coverage
+*.coveragexml
