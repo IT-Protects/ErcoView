@@ -1,6 +1,8 @@
 # ErcoView
 
-Legacy **VB.NET WinForms** desktop app (IMAGE CES / EV2) for proposals, customers, vendors, contacts, job numbers, and DevExpress reports.
+ErcoView project management tool for **Er-Con Technologies** (IMAGE CES / EV2).
+
+Legacy **VB.NET WinForms** desktop app for proposals, customers, vendors, contacts, job numbers, and DevExpress reports.
 
 | Item | Value |
 |------|--------|
@@ -9,6 +11,7 @@ Legacy **VB.NET WinForms** desktop app (IMAGE CES / EV2) for proposals, customer
 | UI | WinForms + DevExpress 12.2 |
 | Data | SQL Server (`ErcoView_Live` / `ErcoView_Training`) via stored procedures |
 | Version | 20.9.28 |
+| License | MIT (see [LICENSE](LICENSE)) |
 
 ## Solution layout
 
