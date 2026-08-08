@@ -1,0 +1,52 @@
+# ErcoView LLM index
+# https://github.com/IT-Protects/ErcoView
+# Use this file to discover canonical documentation for humans and agents.
+
+## Critical rules
+AGENTS.md
+docs/git-crypt.md
+docs/security.md
+
+## Start
+README.md
+docs/README.md
+docs/overview.md
+docs/getting-started.md
+
+## Core concepts
+docs/architecture.md
+docs/domain-model.md
+docs/database.md
+docs/ui-and-workflows.md
+docs/glossary.md
+
+## Build and run
+docs/development.md
+docs/operations.md
+docs/troubleshooting.md
+docs/contributing.md
+
+## Reference
+docs/reference/README.md
+docs/reference/forms-and-handlers.md
+docs/reference/stored-procedures.md
+docs/reference/settings.md
+
+## AI-specific
+docs/ai/README.md
+docs/ai/context-map.md
+docs/ai/coding-conventions.md
+docs/ai/task-playbooks.md
+
+## Deep analysis
+EVALUATION-DEEP-DIVE.md
+
+## Secrets (encrypted in git — do not request plaintext values)
+secrets/README.md
+# secrets/sql.env is git-crypt encrypted
+
+## Source anchors
+ErcoView/modMain.vb
+ErcoView/Class/
+ErcoView/Forms/
+ErcoView/DataSets/dsErcoView.xsd

@@ -4,6 +4,9 @@
 **Codebase:** `C:\Users\SamuelPearson\grok\ErcoView`  
 **App version:** 20.9.28 · **Stack:** VB.NET WinForms · .NET Framework 4.0 · DevExpress 12.2
 
+> **Product documentation (humans + AI):** start at [`docs/README.md`](docs/README.md).  
+> This file is an **engineering evaluation / roadmap**, not the day-to-day manual.
+
 This document expands evaluation items **1–4**. Bug fixes from item 2 are already applied in source (see §2).
 
 ---
