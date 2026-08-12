@@ -75,7 +75,7 @@ Authoritative detailed list: [reference/stored-procedures.md](reference/stored-p
 
 ## Exporting schema (recommended for maintainers)
 
-Run on a server you control and commit **non-secret** scripts under a future `db/` folder:
+Scripts belong under [`db/`](../db/README.md). Run on a server you control and commit **non-secret** schema/procedure scripts only:
 
 ```sql
 -- List procedures

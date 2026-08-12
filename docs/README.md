@@ -14,15 +14,17 @@
 | Clone, unlock secrets, run | [Getting started](getting-started.md) |
 | See how the system is built | [Architecture](architecture.md) |
 | Learn business entities | [Domain model](domain-model.md) |
-| Work with SQL / SPs | [Database](database.md) |
+| Work with SQL / SPs | [Database](database.md) · [`db/`](../db/README.md) |
 | Operate in production | [Operations](operations.md) |
 | Change code safely | [Development](development.md) |
 | Handle credentials | [Security](security.md) · [git-crypt](git-crypt.md) |
 | Fix common failures | [Troubleshooting](troubleshooting.md) |
 | Look up screens / SPs / settings | [Reference](reference/README.md) |
+| See improvement plan | [Roadmap](roadmap.md) |
 | Onboard an AI agent | [AI documentation](ai/README.md) · root [`AGENTS.md`](../AGENTS.md) |
 
-Deep evaluation (risks, modernization): [`EVALUATION-DEEP-DIVE.md`](../EVALUATION-DEEP-DIVE.md)
+Deep evaluation (risks, modernization): [`EVALUATION-DEEP-DIVE.md`](../EVALUATION-DEEP-DIVE.md)  
+Auth hashing design: [`design/auth-password-hashing.md`](design/auth-password-hashing.md)
 
 ---
 
@@ -44,6 +46,8 @@ docs/
 ├── glossary.md               Terms
 ├── git-crypt.md              Secret encryption
 ├── contributing.md           How to contribute
+├── roadmap.md                Improvement plan & status
+├── design/                   Design notes (e.g. password hashing)
 ├── reference/
 │   ├── README.md
 │   ├── forms-and-handlers.md

@@ -24,7 +24,8 @@
 | **Operators** | [Operations](docs/operations.md) · [Troubleshooting](docs/troubleshooting.md) |
 | **Security** | [Security](docs/security.md) · [git-crypt](docs/git-crypt.md) |
 | **AI agents** | [`AGENTS.md`](AGENTS.md) · [AI docs](docs/ai/README.md) · [`llms.txt`](llms.txt) |
-| **Deep dive** | [Evaluation & roadmap](EVALUATION-DEEP-DIVE.md) |
+| **Roadmap** | [Improvement roadmap](docs/roadmap.md) · [Evaluation deep dive](EVALUATION-DEEP-DIVE.md) |
+| **Database scripts** | [`db/`](db/README.md) (export Training schema/SPs here) |
 
 ---
 

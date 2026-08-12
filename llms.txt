@@ -38,8 +38,14 @@ docs/ai/context-map.md
 docs/ai/coding-conventions.md
 docs/ai/task-playbooks.md
 
-## Deep analysis
+## Roadmap and design
+docs/roadmap.md
+docs/design/auth-password-hashing.md
 EVALUATION-DEEP-DIVE.md
+
+## Database scripts
+db/README.md
+db/NOTES.md
 
 ## Secrets (encrypted in git — do not request plaintext values)
 secrets/README.md

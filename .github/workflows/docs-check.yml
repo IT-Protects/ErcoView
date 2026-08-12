@@ -1,0 +1,37 @@
+name: Docs check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  required-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify critical documentation files exist
+        run: |
+          set -euo pipefail
+          files=(
+            README.md
+            AGENTS.md
+            llms.txt
+            docs/README.md
+            docs/roadmap.md
+            docs/getting-started.md
+            docs/architecture.md
+            docs/security.md
+            docs/database.md
+            docs/ai/README.md
+            docs/design/auth-password-hashing.md
+            db/README.md
+            .github/PULL_REQUEST_TEMPLATE.md
+          )
+          for f in "${files[@]}"; do
+            if [[ ! -f "$f" ]]; then
+              echo "MISSING: $f"
+              exit 1
+            fi
+            echo "OK $f"
+          done
